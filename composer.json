@@ -1,0 +1,7 @@
+{
+    "name": "fischer/excel-cli",
+    "type": "project",
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.16"
+    }
+}

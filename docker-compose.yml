@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      args:
+        user: aaron
+        uid: 1000
+      context: .
+      dockerfile: Docker/php/Dockerfile
+    image: spreadsheet-cli/php
+    restart: always
+    volumes:
+      - ./:/code
+    env_file:
+      - ./Docker/env-docker.env
+    networks:
+      - app-network
+
+#Docker Networks
+networks:
+  app-network:
+    driver: bridge
